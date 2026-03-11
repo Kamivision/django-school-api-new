@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r7#@)4_=gu3(w$)hi#z=%6zbnj)z5cdk)78zbwokwa9ljsc2hz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'student_app'
+    'student_app',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,12 @@ WSGI_APPLICATION = 'school_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'school_db',
+        'NAME': 'new_school_db',
+        "HOST": "newdb-container",
+        "USER": "kamivision",
+        "PASSWORD": "password",
+        "PORT":'5432'
+    
     }
 }
 

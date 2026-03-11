@@ -42,25 +42,25 @@ class Student(models.Model):
     
     good_student = models.BooleanField(default=True)
     
-    subjects = models.ManyToManyField(
-        'subject_app.Subject',
-        related_name='students'
-    )
+    # subjects = models.ManyToManyField(
+    #     'subject_app.Subject',
+    #     related_name='students'
+    # )
     
     def __str__(self):
         return f"< {self.name} - {self.student_email} - {self.locker_number}>"
     
-    def add_subject(self, subject_id):
-        if self.subjects.count() < 8:
-            self.subjects.add(subject_id)
-        else:
-            raise Exception("This students class schedule is full!")
+    # def add_subject(self, subject_id):
+    #     if self.subjects.count() < 8:
+    #         self.subjects.add(subject_id)
+    #     else:
+    #         raise Exception("This students class schedule is full!")
         
-    def remove_subject(self, subject_id):
-        if self.subjects.count() > 0:
-            self.subjects.remove(subject_id)
-        else:
-            raise Exception("This students class schedule is empty!")
+    # def remove_subject(self, subject_id):
+    #     if self.subjects.count() > 0:
+    #         self.subjects.remove(subject_id)
+    #     else:
+    #         raise Exception("This students class schedule is empty!")
     
     def locker_assignment(self, new_locker):
         self.locker_number = new_locker
