@@ -1,0 +1,49 @@
+[
+{
+  "model": "student_app.student",
+  "pk": 1,
+  "fields": {
+    "name": "John W. Watson",
+    "student_email": "johnnyBoy@school.com",
+    "personal_email": "johnnyBoy@gmail.com",
+    "locker_number": 1,
+    "locker_combination": "12-12-12",
+    "good_student": true,
+    "subjects": [
+      1
+    ]
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 2,
+  "fields": {
+    "name": "Kami L. Timmons",
+    "student_email": "Kami@school.com",
+    "personal_email": "Kami@Kami.com",
+    "locker_number": 2,
+    "locker_combination": "12-12-12",
+    "good_student": true,
+    "subjects": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "student_app.student",
+  "pk": 3,
+  "fields": {
+    "name": "Jane T. Doe",
+    "student_email": "jane@school.com",
+    "personal_email": "jane@email.com",
+    "locker_number": 3,
+    "locker_combination": "12-12-12",
+    "good_student": true,
+    "subjects": [
+      1,
+      2
+    ]
+  }
+}
+]

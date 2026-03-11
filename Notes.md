@@ -23,3 +23,6 @@ source /home/kamivision/corsair/week-5/django-school-api-new/.school/bin/activat
 
 ### Create App
 `python manage.py startapp` + <app_name>
+
+### Data transfer
+ python manage.py dumpdata student_app.Student --indent 2 > student_app/fixtures/student_data.json
