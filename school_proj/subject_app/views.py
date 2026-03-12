@@ -13,6 +13,6 @@ class AllSubjects(APIView):
     
 class SubjectView(APIView):
     def get(self, request, name):
-        subject = Subject.objects.get(name=name)
+        subject = Subject.objects.get(subject_name=name.title())
         serializer = SubjectSerializer(subject)
         return Response(serializer.data)

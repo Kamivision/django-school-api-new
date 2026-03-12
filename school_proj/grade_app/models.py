@@ -10,8 +10,8 @@ class Grade(models.Model):
         blank=False,
         default=100,
         validators=[
-            val.MinValueValidator(0),
-            val.MaxValueValidator(100)]
+            val.MinValueValidator(0.00),
+            val.MaxValueValidator(100.00)]
         )
     a_subject = models.ForeignKey(
         'subject_app.Subject', 
