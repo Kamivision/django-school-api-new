@@ -10,3 +10,9 @@ class AllSubjects(APIView):
         subjects = Subject.objects.all()
         serializer = SubjectSerializer(subjects, many=True)
         return Response(serializer.data)
+    
+class SubjectView(APIView):
+    def get(self, request, name):
+        subject = Subject.objects.get(name=name)
+        serializer = SubjectSerializer(subject)
+        return Response(serializer.data)

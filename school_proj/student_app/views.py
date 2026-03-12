@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .serializers import StudentSerializer, StudentAllSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -11,8 +11,8 @@ class AllStudentsView(APIView):
         serializer = StudentAllSerializer(students, many=True)
         return Response(serializer.data)
     
-# class StudentView(APIView):
-#     def get(self, request, name):
-#         student = Student.objects.get(id=student_id)
-#         serializer = StudentSerializer(student)
-#         return Response(serializer.data)
+class StudentView(APIView):
+    def get(self, request, id):
+        student = get_object_or_404(Student, id=id)
+        serializer = StudentSerializer(student)
+        return Response(serializer.data)

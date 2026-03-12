@@ -11,4 +11,13 @@ class StudentAllSerializer(serializers.ModelSerializer):
     subjects = SubjectSerializer(many=True, read_only=True)
     class Meta:
         model = Student
-        fields = '__all__'
+        fields = [
+            "id",
+            "name",
+            "student_email",
+            "personal_email",
+            "locker_number",
+            "locker_combination",
+            "good_student",
+            "subjects",
+        ]
